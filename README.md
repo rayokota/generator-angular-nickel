@@ -34,6 +34,8 @@ Your service will run at [http://localhost:8080](http://localhost:8080).
 
 ## Creating a persistent entity
 
+First, create a database named `my_db` in PostgreSQL.
+
 Generate the entity:
 
     yo angular-nickel:entity [myentity]
