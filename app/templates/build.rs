@@ -22,7 +22,7 @@ extern crate diesel;
 use diesel::*;
 
 fn main() {
-    let connection = Connection::establish("postgres://postgres:postgres@localhost/my_db").unwrap();
+    let connection = Connection::establish("postgres://postgres:postgres@localhost:5432/my_db").unwrap();
     migrations::run_pending_migrations(&connection).unwrap();
     inner::main();
 }

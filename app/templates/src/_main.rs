@@ -79,7 +79,7 @@ fn main() {
         let id_param = request.param("id").unwrap().parse::<i32>().unwrap();
         let count = delete(<%= pluralize(entity.name) %>.filter(id.eq(id_param))).execute(&connection).unwrap();
         if count > 0 {
-            (StatusCode::Ok, "Deleted".to_string())
+            (StatusCode::NoContent, "Deleted".to_string())
         } else {
             (StatusCode::InternalServerError, "Error".to_string())
         }
